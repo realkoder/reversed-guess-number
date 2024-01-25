@@ -109,7 +109,7 @@ export default function Home() {
           }
           {guessedNumberWithResult.result !== Result.WAITING &&
             <span>
-              {index + 1}. I guessed {guessedNumberWithResult.guessedNumber} - and that was&nbsp;
+              {index + 1}. I guessed {guessedNumberWithResult.guessedNumber} - and that was<span> </span>
               {guessedNumberWithResult.result === Result.TOO_LOW ? "too low" :
                 guessedNumberWithResult.result === Result.TOO_HIGH ? "too high" : "CORRECT"}!
             </span>
