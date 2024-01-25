@@ -64,7 +64,7 @@ export default function Home() {
 
           {guessedNumberWithResult.result == Result.WAITING &&
             <div>
-              <span>{index + 1}. I'm guessing {guessedNumberWithResult.guessedNumber} - is that</span>
+              <span>{index + 1}. Im guessing {guessedNumberWithResult.guessedNumber} - is that</span>
               <button
                 className="max-w-36 bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 m-2 rounded inline-block"
                 onClick={() => {
