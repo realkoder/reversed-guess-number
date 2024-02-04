@@ -18,7 +18,8 @@ export default function Home() {
   const [guessedNumbersWithResults, setGuessedNumbersWithResults] = useState<GuessedNumberWithResult[]>([]);
 
   const handleGuessNumber = () => {
-    if (guessedNumbersWithResults.length > 0 && guessedNumbersWithResults[guessedNumbersWithResults.length - 1].result === Result.WAITING) return;
+    if (guessedNumbersWithResults.findIndex(guessedNumberWithResult => guessedNumberWithResult.result === Result.CORRECT) !== -1
+      || (guessedNumbersWithResults.length > 0 && guessedNumbersWithResults[guessedNumbersWithResults.length - 1].result === Result.WAITING)) return;
 
     let isRandomNumberCorrectlyGenerated = false;
 
