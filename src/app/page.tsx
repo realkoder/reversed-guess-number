@@ -18,6 +18,8 @@ export default function Home() {
   const [guessedNumbersWithResults, setGuessedNumbersWithResults] = useState<GuessedNumberWithResult[]>([]);
 
   const handleGuessNumber = () => {
+    if (guessedNumbersWithResults.length > 0 && guessedNumbersWithResults[guessedNumbersWithResults.length - 1].result === Result.WAITING) return;
+
     let isRandomNumberCorrectlyGenerated = false;
 
     while (!isRandomNumberCorrectlyGenerated) {
@@ -30,7 +32,7 @@ export default function Home() {
         console.log(guessedNumbersWithResults);
         isRandomNumberCorrectlyGenerated = true; // Ending this while
       }
-      
+
       const isDuplicate = guessedNumbersWithResults.some(
         (item) => item.guessedNumber === randomNumber
       );
@@ -39,7 +41,7 @@ export default function Home() {
         setGuessedNumbersWithResults((cur) => [
           ...cur,
           { guessedNumber: randomNumber, result: Result.WAITING },
-        ]);        
+        ]);
         isRandomNumberCorrectlyGenerated = true; // A new number has been guessed lets end this while
       }
     }
