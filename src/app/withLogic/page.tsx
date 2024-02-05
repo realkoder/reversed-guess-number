@@ -45,7 +45,7 @@ export default function Home() {
     <main className="flex flex-col text-center p-24">
 
       <div>
-        <h1>Lets Guess Some numbers!</h1>
+        <h1>Lets Guess Some numbers (with the use of binary search)!</h1>
         <button
           className="max-w-36 bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded inline-block"
           onClick={handleGuessNumber}

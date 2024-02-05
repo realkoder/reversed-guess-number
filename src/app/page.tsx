@@ -53,8 +53,8 @@ export default function Home() {
   return (
     <main className="flex flex-col text-center p-24">
 
-      <Link href="/withLogic">
-        <a>Go to Reversed guess Number Binary Search!</a>
+      <Link href="/withLogic" className="my-4 text-blue-500 hover:underline">
+        Go to Reversed guess Number Binary Search!
       </Link>
 
       <div>
