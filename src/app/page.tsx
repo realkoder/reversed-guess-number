@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { useState } from "react";
 
 enum Result {
@@ -51,6 +52,10 @@ export default function Home() {
 
   return (
     <main className="flex flex-col text-center p-24">
+
+      <Link href="/withLogic">
+        <a>Go to Reversed guess Number Binary Search!</a>
+      </Link>
 
       <div>
         <h1>Lets Guess Some numbers!</h1>
